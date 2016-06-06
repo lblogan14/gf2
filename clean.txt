@@ -1,0 +1,7 @@
+
+
+# Only print the date, close price
+awk 'BEGIN {FS =","}  {print $2 $3 "," $7 "," $8}' 2318.clean.csv  > 2318.clean.csv.2
+
+# Add double quote to rate
+awk '{print "\"" $1 " "  $2 " " $3 "\"" " " $4}'  cnyhkd_rate.csv > cnyhdk_rate.clean.csv
